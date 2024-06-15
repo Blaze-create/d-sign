@@ -5,24 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e785ddfc20.js" crossorigin="anonymous"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/home-gsap.js" defer></script>
 
     <title>Homepage</title>
 </head>
 
 <body>
+    <div class="website-logo">
+        <h2>D-SIGN</h2>
+    </div>
+    <div class="contact">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-solid fa-phone"></i>
+        +230 5783 5801
+    </div>
+    <div class="my-nav">
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+
     <div class="swipe-section">
         <section class="panel" style="background: #ffbbbb;">
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
-                        Graphic Design
-                        <div class="view-btn">
-                            <button>View Works</button>
-                        </div>
+                        <p>Graphic Design</p>
+                        <a href="#" class="custom-btn">Get Started</a>
                     </div>
                     <div class="main-bg">
                         <img src="img/graphic-design-company.png" alt="">
@@ -34,7 +53,7 @@
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
-                        Digital Printing
+                        <p>Digital Printing</p>
                         <div class="view-btn">
                             <button>View Works</button>
                         </div>
@@ -50,7 +69,7 @@
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
-                        CNC Cutting and Carving
+                        <p>CNC Cutting and Carving</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +79,7 @@
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
-                        Sign Making
+                        <p>Sign Making</p>
                     </div>
                 </div>
             </div>
@@ -71,159 +90,104 @@
         </section> -->
     </div>
 
-    <!-- spacer -->
-    <div style="height: 400vh"></div>
 
 
-    <style>
-        .slide-wrapper {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    <!-- IMAGE BANNER -->
+    <div class="image-banner-wrapper">
+        <section class="image-banner">
+            <div class="wrapper wrapper-text">
+                |D-SIGN|D-SIGN|D-SIGN|D-SIGN|
+            </div>
+        </section>
+        <div class="image-banner">
+            <ul class="wrapper">
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/1/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/2/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/3/1240/874' width='1240'>
+                </li>
+            </ul>
+        </div>
+        <div class="image-banner">
+            <ul class="wrapper">
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/4/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/5/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/6/1240/874' width='1240'>
+                </li>
+            </ul>
+        </div>
+        <div class="image-banner">
+            <ul class="wrapper">
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/8/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/9/1240/874' width='1240'>
+                </li>
+                <li>
+                    <img height='874' src='https://picsum.photos/seed/10/1240/874' width='1240'>
+                </li>
+            </ul>
+        </div>
+        <section class="image-banner">
+            <div class="wrapper wrapper-text">
+                |D-SIGN|D-SIGN|D-SIGN|D-SIGN|
+            </div>
+        </section>
+    </div>
 
-        .slide-wrapper .slide-title {
-            position: absolute;
-            top: 200px;
-            left: 50px;
-            text-align: center;
-            font-size: 30px;
-            text-transform: uppercase;
-            letter-spacing: 14px;
-            font-weight: 700;
-        }
 
-        .slide-wrapper .slide-title .view-btn button {
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            padding: 5px 10px;
-            background: #6fd6ff;
-            color: white;
-            font-weight: 600;
-        }
 
-        .slide-wrapper .main-bg {
-            max-width: 70%;
-            width: 100%;
-        }
-
-        .slide-wrapper .main-bg img {
-            width: 100%;
-            height: 100%;
-        }
-
-        body,
-        html {
-            overscroll-behavior: none;
-            min-height: 100vh;
-        }
-
-        .swipe-section {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            overflow: visible;
-        }
-
-        .swipe-section .panel {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            width: 100%;
-            min-height: 100vh;
-            position: absolute;
-        }
-
-        .vh-200 {
-            height: 500vh !important;
-        }
-    </style>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // need to stop at a section mid-page? See this demo: https://codepen.io/GreenSock/pen/MWGVJYL?editors=0010
-
-        // Gsap Code
-        let currentIndex = -1;
-        let animating;
-        let swipePanels = gsap.utils.toArray(".swipe-section .panel");
-
-        // set second panel two initial 100%
-        gsap.set(".x-100", { xPercent: 100 });
-
-        // set z-index levels for the swipe panels
-        gsap.set(swipePanels, {
-            zIndex: i => i
-        });
-
-        // create an observer and disable it to start
-        let intentObserver = ScrollTrigger.observe({
-            type: "wheel,touch,scroll",
-            onUp: () => !animating && gotoPanel(currentIndex + 1, true),
-            onDown: () => !animating && gotoPanel(currentIndex - 1, false),
-            wheelSpeed: -1,
-            tolerance: 10,
-            preventDefault: true,
-            onPress: self => {
-                // on touch devices like iOS, if we want to prevent scrolling, we must call preventDefault() on the touchstart (Observer doesn't do that because that would also prevent side-scrolling which is undesirable in most cases)
-                ScrollTrigger.isTouch && self.event.preventDefault()
-            }
-        })
-        intentObserver.disable();
-
-        // handle the panel swipe animations
-        function gotoPanel(index, isScrollingDown) {
-            animating = true;
-            // return to normal scroll if we're at the end or back up to the start
-            if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
-
-                let target = index;
-                gsap.to(target, {
-                    // xPercent: isScrollingDown ? -100 : 0,
-                    duration: 0.00,
-                    onComplete: () => {
-                        animating = false;
-                        isScrollingDown && intentObserver.disable();
-                    }
-                });
-                return
-            }
-
-            //   target the second panel, last panel?
-            let target = isScrollingDown ? swipePanels[index] : swipePanels[currentIndex];
-
-            gsap.to(target, {
-                xPercent: isScrollingDown ? 0 : 100,
-                duration: 0.75,
-                onComplete: () => {
-                    animating = false;
-                }
-            });
-            currentIndex = index;
-            console.log(index);
-
-        }
-
-        // pin swipe section and initiate observer
-        ScrollTrigger.create({
-            trigger: ".swipe-section",
-            pin: true,
-            start: "top top",
-            end: "+=1",
-            onEnter: (self) => {
-                intentObserver.enable();
-                gotoPanel(currentIndex + 1, true);
-            },
-            onEnterBack: () => {
-                intentObserver.enable();
-                gotoPanel(currentIndex - 1, false);
-            }
-        })
-
-    </script>
+    <div class="background footer">
+        <div class="container-fluid">
+            <div class="footer">
+                <div class="website-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="website-title">
+                    <span>D</span>-SIGN
+                </div>
+                <div class="designer-link">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="footer-links">
+                    <div class="row">
+                        <div class="col">
+                            Privacy Policy
+                        </div>
+                        <div class="col">
+                            Terms of service
+                        </div>
+                        <div class="col">
+                            Contact us
+                        </div>
+                        <div class="col">
+                            News
+                        </div>
+                        <div class="col">
+                            Search
+                        </div>
+                    </div>
+                </div>
+                <div class="website-detail">
+                    © 2023 D-SIGN All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 </body>
 
 </html>
