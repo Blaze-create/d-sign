@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e785ddfc20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/splide.min.css">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- <script src="js/home-gsap.js" defer></script> -->
+    <script src="js/splide.min.js"></script>
+    <script src="js/splide-extension-auto-scroll.min.js"></script>
+    <title>Homepage</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="splide" aria-labelledby="carousel-heading">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide" style="max-width: 300px;margin:0 20px;"><img height='500'
+                            src='https://picsum.photos/seed/9/1240/874' width='300'></li>
+                    <li class="splide__slide" style="max-width: 300px;margin:0 20px;"><img height='500'
+                            src='https://picsum.photos/seed/8/1240/874' width='300'>
+                    </li>
+                    <li class="splide__slide" style="max-width: 300px;margin:0 20px;"><img height='500'
+                            src='https://picsum.photos/seed/7/1240/874' width='300'>
+                    </li>
+                    <li class="splide__slide" style="max-width: 300px;margin:0 20px;"><img height='500'
+                            src='https://picsum.photos/seed/4/1240/874' width='300'>
+                    </li>
+                    <li class="splide__slide" style="max-width: 300px;margin:0 20px;"><img height='500'
+                            src='https://picsum.photos/seed/3/1240/874' width='300'>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', function () {
+            const splide = new Splide('.splide', {
+                type: 'loop',
+                drag: 'free',
+                focus: 'center',
+                perPage: 3,
+                autoScroll: {
+                    speed: 2,
+                },
+            });
+
+            splide.mount(window.splide.Extensions);
+        });
+    </script>
+</body>
+
+</html>

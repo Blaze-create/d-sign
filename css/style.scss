@@ -38,6 +38,186 @@
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    // font-family: "Lobster", sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    // font-family: "Roboto Mono", monospace;
+}
+
+// SPINNER
+.spinner-wrapper {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(33, 33, 41, 1);
+
+    svg {
+        font-family: "Russo One", sans-serif;
+        width: 100%;
+        height: 100%;
+
+        text {
+            animation: stroke 3s infinite alternate;
+            stroke-width: 2;
+            stroke: var(--accent);
+            font-size: 100px;
+        }
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(72, 138, 204, 0);
+            stroke: white;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+
+        70% {
+            fill: rgba(72, 138, 204, 0);
+            stroke: white;
+        }
+
+        80% {
+            fill: rgba(72, 138, 204, 0);
+            stroke: white;
+            stroke-width: 3;
+        }
+
+        100% {
+            fill: white;
+            stroke: rgba(54, 95, 160, 0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+}
+
+.row.the-contact {
+    padding: 20px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .col {
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.back-to-top {
+    text-decoration: none;
+    z-index: 1001;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: rgb(5, 3, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: .3s;
+
+    &:hover {
+        border-radius: 50%;
+        background: rgb(20, 12, 75);
+        transform: scale(1.4);
+
+    }
+
+    i {
+        color: white;
+    }
+}
+
+.header-wrapper {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header-title {
+        font-size: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .header-slogan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        min-width: 300px;
+
+        .span-wrapper {
+            min-width: 100px;
+
+            span {
+                color: rgb(103, 255, 235);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50px);
+    transition: .5s ease-out;
+
+    &.active {
+        filter: blur(0px);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.splide {
+    .splide__track {
+        .splide__list {
+            .splide__slide {
+                max-width: 300px;
+                margin: 0 20px;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+                height: 500px;
+
+
+                &:hover {
+                    filter: sepia(0.3);
+                    transform: scale(1.1);
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
 
 .website-logo {
     position: fixed;
@@ -50,6 +230,8 @@
     align-content: center;
 
     h2 {
+        font-family: "Lobster", sans-serif;
+        color: white;
         letter-spacing: 4px;
         font-weight: 700;
     }
@@ -109,6 +291,7 @@
                 color: white;
                 letter-spacing: 5px;
                 font-weight: 600;
+                font-family: "Lobster", sans-serif;
             }
 
             &:hover {
@@ -241,6 +424,7 @@
     overflow: hidden;
 
     .wrapper-text {
+        font-family: "Lobster", sans-serif;
         font-size: clamp(8rem, 15vw, 16rem);
         line-height: 1;
         font-weight: 900;

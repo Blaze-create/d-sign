@@ -7,16 +7,50 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/e785ddfc20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/splide.min.css">
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/home-gsap.js" defer></script>
-
+    <script src="js/splide.min.js"></script>
+    <script src="js/splide-extension-auto-scroll.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <title>Homepage</title>
 </head>
 
 <body>
+
+    <a href="#header" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+
+    <!-- <div class="container-fluid">
+        <div class="slide-wrapper">
+            <div class="slide-title">
+                <p>Graphic Design</p>
+                <a href="#" class="custom-btn">Get Started</a>
+            </div>
+            <div class="main-bg">
+                <img src="img/graphic-design-company.png" alt="">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="spinner-wrapper">
+        <svg>
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                D-SIGN
+            </text>
+        </svg>
+    </div>
+
+
+
+
     <div class="website-logo">
         <h2>D-SIGN</h2>
     </div>
@@ -35,37 +69,102 @@
     </div>
 
 
-    <div class="swipe-section">
-        <section class="panel" style="background: #ffbbbb;">
-            <div class="container-fluid">
-                <div class="slide-wrapper">
-                    <div class="slide-title">
-                        <p>Graphic Design</p>
-                        <a href="#" class="custom-btn">Get Started</a>
+    <div class="swipe-section" id="header">
+        <section class="panel" style="background: radial-gradient(circle,rgba(33,33,41,1)  50%, rgba(0,0,0,1) 100%);">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-title">
+                        graphic design
                     </div>
-                    <div class="main-bg">
-                        <img src="img/graphic-design-company.png" alt="">
+                    <div class="header-slogan">
+                        Where Art Meets <div class="span-wrapper"><span id="page1"></span></div>
                     </div>
                 </div>
+                <section class="splide a" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/9/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
+            <script>
+                let typingText = new Typed("#page1", {
+                    strings: ['Ingenuity', 'Innovation', "Creativity", "Imagination"],
+                    loop: true,
+                    typeSpeed: 150,
+                    backSpeed: 10,
+                    backDelay: 1400,
+                });
+            </script>
         </section>
-        <section class="panel x-100" style="background: #1eae98;">
-            <div class="container-fluid">
-                <div class="slide-wrapper">
-                    <div class="slide-title">
-                        <p>Digital Printing</p>
-                        <div class="view-btn">
-                            <button>View Works</button>
-                        </div>
-                    </div>
-                    <div class="main-bg">
-                        <img src="img/Baner-Digitalen-print-scaled-1-large-removebg-preview.png" alt="">
-                    </div>
-                </div>
-            </div>
 
+
+        <section class="panel x-100"
+            style="background:radial-gradient(circle, rgba(48,25,52,1) 50%, rgba(0,0,0,1) 100%);">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-title">
+                        digital printing
+                    </div>
+                    <div class="header-slogan">
+                        Transforming Pixels to <div class="span-wrapper"><span id="page2"></span></div>
+                    </div>
+                </div>
+                <section class="splide b" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/9/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <script>
+                let typingText2 = new Typed("#page2", {
+                    strings: ['paper', 'Canvas', "Fabric", "Masterpieces"],
+                    loop: true,
+                    typeSpeed: 150,
+                    backSpeed: 10,
+                    backDelay: 1400,
+                });
+            </script>
+            <script type="module">
+                document.addEventListener('DOMContentLoaded', function () {
+                    const splidea = new Splide('.splide.a', {
+                        type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
+                        perPage: 3,
+                        autoScroll: {
+                            speed: 1.5,
+                        },
+                    });
+                    const splideb = new Splide('.splide.b', {
+                        type: 'loop',
+                        drag: 'free',
+                        focus: 'center',
+                        perPage: 3,
+                        autoScroll: {
+                            speed: -1.5,
+                        },
+                    });
+
+                    splidea.mount(window.splide.Extensions);
+                    splideb.mount(window.splide.Extensions);
+                });
+            </script>
         </section>
-        <section class="panel x-100" style="background: #6fd6ff;">
+
+
+        <section class="panel x-100" style="background: #1B1212;">
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
@@ -75,7 +174,9 @@
             </div>
 
         </section>
-        <section class="panel blue x-100" style="background: #fe90af;">
+
+
+        <section class="panel blue x-100" style="background: #353935;">
             <div class="container-fluid">
                 <div class="slide-wrapper">
                     <div class="slide-title">
@@ -145,7 +246,34 @@
         </section>
     </div>
 
-
+    <div class="container-fluid">
+        <div class="row the-contact">
+            <div class="col reveal">
+                <div class="icon">
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                </div>
+                <div class="contact-box">
+                    +230 5783 5801
+                </div>
+            </div>
+            <div class="col reveal">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope fa-2x"></i>
+                </div>
+                <div class="contact-box">
+                    email@gmail.com
+                </div>
+            </div>
+            <div class="col reveal">
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot fa-2x"></i>
+                </div>
+                <div class="contact-box">
+                    location
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="background footer">
         <div class="container-fluid">
@@ -153,10 +281,10 @@
                 <div class="website-logo">
                     <img src="img/logo.png" alt="">
                 </div>
-                <div class="website-title">
+                <div class="website-title reveal">
                     <span>D</span>-SIGN
                 </div>
-                <div class="designer-link">
+                <div class="designer-link reveal">
                     <i class="fa-brands fa-whatsapp"></i>
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-linkedin"></i>
@@ -188,6 +316,33 @@
         </div>
     </div>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(window).on('load', function () {
+            var preloaderFadeOutTime = 500;
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                setTimeout(function () {
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }, 500);
+            }
+            hidePreloader();
+        });
+        window.addEventListener("scroll", () => {
+            var reveals = document.querySelectorAll(".reveal");
+            console.log(reveals);
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
