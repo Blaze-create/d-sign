@@ -60,7 +60,6 @@ function gotoPanel(index, isScrollingDown) {
         }
     });
     currentIndex = index;
-    console.log(index);
 }
 ScrollTrigger.create({
     trigger: ".swipe-section",

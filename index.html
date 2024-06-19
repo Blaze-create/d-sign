@@ -4,11 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Discover top-notch graphic design, digital printing, sign making, and CNC cutting and carving services in Mauritius with D-SIGN. Contact us today for all your printing needs!">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "[Your Company Name]",
+          "image": "[URL to an image of your business or logo]",
+          "description": "Top printing services in Mauritius, offering graphic design, digital printing, sign making, and CNC cutting and carving.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "[Your Street Address]",
+            "addressLocality": "[City]",
+            "addressRegion": "[Region]",
+            "postalCode": "[Postal Code]",
+            "addressCountry": "MU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": [Your Latitude],
+            "longitude": [Your Longitude]
+          },
+          "url": "[Your Website URL]",
+          "telephone": "[Your Phone Number]",
+          "priceRange": "$$",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "[Link to your Facebook page]",
+            "[Link to your Twitter profile]",
+            "[Link to your Instagram profile]",
+            "[Link to your LinkedIn page]"
+          ]
+        }
+        </script>
+
+
+
+
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/e785ddfc20.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/splide.min.css">
 
+
+    <script src="js/home_script.js" defer></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
@@ -21,25 +75,9 @@
 </head>
 
 <body>
-
     <a href="#header" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
-
-
-
-    <!-- <div class="container-fluid">
-        <div class="slide-wrapper">
-            <div class="slide-title">
-                <p>Graphic Design</p>
-                <a href="#" class="custom-btn">Get Started</a>
-            </div>
-            <div class="main-bg">
-                <img src="img/graphic-design-company.png" alt="">
-            </div>
-        </div>
-    </div> -->
-
     <div class="spinner-wrapper">
         <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -47,10 +85,6 @@
             </text>
         </svg>
     </div>
-
-
-
-
     <div class="website-logo">
         <h2>D-SIGN</h2>
     </div>
@@ -59,6 +93,8 @@
         <i class="fa-solid fa-phone"></i>
         +230 5783 5801
     </div>
+
+
     <div class="my-nav">
         <ul>
             <li class="active"><a href="#">Home</a></li>
@@ -92,15 +128,6 @@
                     </div>
                 </section>
             </div>
-            <script>
-                let typingText = new Typed("#page1", {
-                    strings: ['Ingenuity', 'Innovation', "Creativity", "Imagination"],
-                    loop: true,
-                    typeSpeed: 150,
-                    backSpeed: 10,
-                    backDelay: 1400,
-                });
-            </script>
         </section>
 
 
@@ -127,68 +154,59 @@
                     </div>
                 </section>
             </div>
-            <script>
-                let typingText2 = new Typed("#page2", {
-                    strings: ['paper', 'Canvas', "Fabric", "Masterpieces"],
-                    loop: true,
-                    typeSpeed: 150,
-                    backSpeed: 10,
-                    backDelay: 1400,
-                });
-            </script>
-            <script type="module">
-                document.addEventListener('DOMContentLoaded', function () {
-                    const splidea = new Splide('.splide.a', {
-                        type: 'loop',
-                        drag: 'free',
-                        focus: 'center',
-                        perPage: 3,
-                        autoScroll: {
-                            speed: 1.5,
-                        },
-                    });
-                    const splideb = new Splide('.splide.b', {
-                        type: 'loop',
-                        drag: 'free',
-                        focus: 'center',
-                        perPage: 3,
-                        autoScroll: {
-                            speed: -1.5,
-                        },
-                    });
-
-                    splidea.mount(window.splide.Extensions);
-                    splideb.mount(window.splide.Extensions);
-                });
-            </script>
         </section>
 
 
-        <section class="panel x-100" style="background: #1B1212;">
-            <div class="container-fluid">
-                <div class="slide-wrapper">
-                    <div class="slide-title">
-                        <p>CNC Cutting and Carving</p>
+        <section class="panel x-100"
+            style="background:radial-gradient(circle, rgba(27, 18, 18,1) 50%,rgba(0,0,0,1) 100%);">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-title">
+                        CNC Cutting and Carving
+                    </div>
+                    <div class="header-slogan">
+                        Transforming Pixels to <div class="span-wrapper"><span id="page3"></span></div>
                     </div>
                 </div>
+                <section class="splide c" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/9/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-
         </section>
 
 
-        <section class="panel blue x-100" style="background: #353935;">
-            <div class="container-fluid">
-                <div class="slide-wrapper">
-                    <div class="slide-title">
-                        <p>Sign Making</p>
+        <section class="panel blue x-100"
+            style="background:radial-gradient(circle, rgb(53, 57, 53) 50%,rgba(0,0,0,1) 100%);">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-title">
+                        sign making
+                    </div>
+                    <div class="header-slogan">
+                        Transforming Pixels to <div class="span-wrapper"><span id="page4"></span></div>
                     </div>
                 </div>
+                <section class="splide d" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/9/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
+                            <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-
         </section>
-        <!-- <section class="panel orange x-100 vh-200">
-            Footer
-        </section> -->
     </div>
 
 
@@ -310,39 +328,12 @@
                     </div>
                 </div>
                 <div class="website-detail">
-                    © 2023 D-SIGN All Right Reserved.
+                    © 2024 D-SIGN All Right Reserved.
                 </div>
             </div>
         </div>
     </div>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    <script>
-        $(window).on('load', function () {
-            var preloaderFadeOutTime = 500;
-            function hidePreloader() {
-                var preloader = $('.spinner-wrapper');
-                setTimeout(function () {
-                    preloader.fadeOut(preloaderFadeOutTime);
-                }, 500);
-            }
-            hidePreloader();
-        });
-        window.addEventListener("scroll", () => {
-            var reveals = document.querySelectorAll(".reveal");
-            console.log(reveals);
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
