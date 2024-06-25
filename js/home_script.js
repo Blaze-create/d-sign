@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     let typingText = new Typed("#page1", {
-        strings: ['Ingenuity', 'Innovation', "Creativity", "Imagination"],
+        strings: ['precision', ' passion', "Creativity", "perfection"],
         loop: true,
         typeSpeed: 150,
         backSpeed: 10,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: 1.5,
+            speed: 1.6,
         },
     });
     const splideb = new Splide('.splide.b', {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: -1.5,
+            speed: 1.6,
         },
     });
     const splidec = new Splide('.splide.c', {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: -1.5,
+            speed: 1.6,
         },
     });
     const splided = new Splide('.splide.d', {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: -1.5,
+            speed: 1.6,
         },
     });
 
@@ -61,11 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $(window).on('load', function () {
-    var preloaderFadeOutTime = 500;
+    var preloaderFadeOutTime = 400;
     function hidePreloader() {
         var preloader = $('.spinner-wrapper');
         setTimeout(function () {
-            preloader.fadeOut(preloaderFadeOutTime);
+            preloader.slideUp(preloaderFadeOutTime,'swing');
         }, 500);
     }
     hidePreloader();
