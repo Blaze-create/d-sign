@@ -76,7 +76,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
-    <a href="#header" class="back-to-top">
+    <a href="#navheader" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
     <div class="spinner-wrapper">
@@ -101,7 +101,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse-2">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Intro</a>
+                        <a class="nav-link active" aria-current="page" href="#navheader">Intro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Gallery</a>
@@ -125,225 +125,255 @@
 
 
     <!-- HEADER -->
-    <div class="header-wrapperr" id="#particles-js">
-        <div class="header-image" id="header_image"></div>
-        <div class="header-center">
-            <div class="banner-wrapper" id="scroll_wrapper">
-                <div class="banner">
-                    <div class="scroll" id="scroll_top">
-                        <div>
-                            <span>A design studio made</span>
+
+
+
+
+
+
+
+    <div id="main" style="overflow: hidden; max-width: 100vw;" class="scrollable-section">
+
+        <section class="header-sec">
+            <div class="header-wrapperr">
+                <img src="img/collage.png" class="header-image" id="header_image" alt="">
+                <div class="header-center" id="navheader">
+
+                    <img src="img/logofull.png" alt="" width="400px" style="filter: invert(1);">
+                    <div class="banner-wrapper" id="scroll_wrapper">
+                        <div class="banner">
+                            <div class="scroll" id="scroll_bottom">
+                                <div>
+                                    <span>Transforming Visions into <span id="text"></span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <p>
+                        Discover top-notch graphic design, digital printing, sign making, and CNC cutting and carving
+                        services in Mauritius with D-SIGN
+                    </p>
+                    <a href="#navinfo" class="custom-btn">Get Started</a>
                 </div>
-                <div class="banner">
-                    <div class="scroll" id="scroll_bottom">
-                        <div>
-                            <span>to elevate your <span id="text"></span></span>
+            </div>
+
+        </section>
+
+        <section class="horizontal" id="navinfo">
+            <section class="panel"
+                style="background: radial-gradient(circle,rgba(33,33,41,1)  50%, rgba(0,0,0,1) 100%);">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="header-title reveal">
+                            Brandings
+                        </div>
+                        <div class="header-slogan reveal">
+                            Print with <div class="span-wrapper"><span id="page1"></span></div>
                         </div>
                     </div>
+                    <section class="splide a reveal" aria-labelledby="carousel-heading">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting1.jpeg' alt="signage company">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Bagde
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting2.jpeg' alt="custom signs">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Window Graphics
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/branding1.jpeg' alt="business signage">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Vechicle branding
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/rollerbanner.jpg' alt="custom sign printing">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Banner
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/showcase.jpeg' alt="custom acrylic signs">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            trade Show Display
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/pos.jpg' alt="sign board">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Point of sale Display
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
-            </div>
-            <p>
-                shot wave fox triangle fish smile shine pencil globe regular arrive headed next screen first cast
-                hill
-                neck field swept diagram scared orange ten
-            </p>
-            <a href="#" class="custom-btn">Get Started</a>
-        </div>
+            </section>
+
+            <section class="panel" style="background:radial-gradient(circle, rgb(53, 57, 53) 50%,rgba(0,0,0,1) 100%);">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="header-title">
+                            sign making
+                        </div>
+                        <div class="header-slogan">
+                            Transforming Pixels to <div class="span-wrapper"><span id="page4"></span></div>
+                        </div>
+                    </div>
+                    <section class="splide d" aria-labelledby="carousel-heading">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src='img/sign.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Exterior Signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign2.jpeg' alt="sign board sign">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Directional Signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign3.jpeg' alt="signage solutions">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Exterior Signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/info.jpeg' alt="acrylic sign printing">
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Informational Signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/led.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Led signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign6.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Frosted graphics
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign7.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Yard signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign8.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Wall-Mounted Signs
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/sign9.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Backlit Signs
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="panel"
+                style="background:radial-gradient(circle, rgba(48,25,52,1) 50%, rgba(0,0,0,1) 100%);">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="header-title">
+                            digital printing
+                        </div>
+                        <div class="header-slogan">
+                            Transforming Pixels to <div class="span-wrapper"><span id="page2"></span></div>
+                        </div>
+                    </div>
+                    <section class="splide b" aria-labelledby="carousel-heading">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide"><img src='img/digitalprinting5.jpeg'></li>
+                                <li class="splide__slide"><img src='img/digitalprinting3.jpeg'></li>
+                                <li class="splide__slide"><img src='img/digitalprinting6.jpeg'></li>
+                                <li class="splide__slide"><img src='img/digitalprinting4.jpeg'></li>
+                                <li class="splide__slide"><img src='img/digitalprinting.jpeg'></li>
+                                <li class="splide__slide"><img src='img/digitalprinting7.jpg'></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+
+            <section class="panel"
+                style="background:radial-gradient(circle, rgba(27, 18, 18,1) 50%,rgba(0,0,0,1) 100%);">
+                <div class="container">
+                    <div class="header-wrapper">
+                        <div class="header-title">
+                            CNC Cutting and Carving
+                        </div>
+                        <div class="header-slogan">
+                            Transforming Pixels to <div class="span-wrapper"><span id="page3"></span></div>
+                        </div>
+                    </div>
+                    <section class="splide c" aria-labelledby="carousel-heading">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide"><img src='img/cnc.jpeg'></li>
+                                <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
+                                <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
+                                <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
+                                <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+
+        </section>
     </div>
-
-
-
-
-
-
-
-
-    <div class="swipe-section" id="header">
-        <section class="panel" style="background: radial-gradient(circle,rgba(33,33,41,1)  50%, rgba(0,0,0,1) 100%);">
-            <div class="container">
-                <div class="header-wrapper">
-                    <div class="header-title">
-                        Brandings
-                    </div>
-                    <div class="header-slogan">
-                        Print with <div class="span-wrapper"><span id="page1"></span></div>
-                    </div>
-                </div>
-                <section class="splide a" aria-labelledby="carousel-heading">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <img src='img/digitalprinting1.jpeg' alt="signage company">
-                                <div class="slide-content">
-                                    Bagde
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/digitalprinting2.jpeg' alt="custom signs">
-                                <div class="slide-content">
-                                    Window Graphics
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/branding1.jpeg' alt="business signage">
-                                <div class="slide-content">
-                                    Vechicle branding
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/rollerbanner.jpg' alt="custom sign printing">
-                                <div class="slide-content">
-                                    Banner
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/showcase.jpeg' alt="custom acrylic signs">
-                                <div class="slide-content">
-                                    trade Show Display
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/pos.jpg' alt="sign board">
-                                <div class="slide-content">
-                                    Point of sale Display
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <section class="panel blue x-100"
-            style="background:radial-gradient(circle, rgb(53, 57, 53) 50%,rgba(0,0,0,1) 100%);">
-            <div class="container">
-                <div class="header-wrapper">
-                    <div class="header-title">
-                        sign making
-                    </div>
-                    <div class="header-slogan">
-                        Transforming Pixels to <div class="span-wrapper"><span id="page4"></span></div>
-                    </div>
-                </div>
-                <section class="splide d" aria-labelledby="carousel-heading">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <img src='img/sign.jpeg'>
-                                <div class="slide-content">
-                                    Exterior Signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign2.jpeg' alt="sign board sign">
-                                <div class="slide-content">
-                                    Directional Signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign3.jpeg' alt="signage solutions">
-                                <div class="slide-content">
-                                    Exterior Signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/info.jpeg' alt="acrylic sign printing">
-                                <div class="slide-content">
-                                    Informational Signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/led.jpeg'>
-                                <div class="slide-content">
-                                    Led signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign6.jpeg'>
-                                <div class="slide-content">
-                                    Frosted graphics
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign7.jpeg'>
-                                <div class="slide-content">
-                                    Yard signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign8.jpeg'>
-                                <div class="slide-content">
-                                    Wall-Mounted Signs
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <img src='img/sign9.jpeg'>
-                                <div class="slide-content">
-                                    Backlit Signs
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-        <section class="panel x-100"
-            style="background:radial-gradient(circle, rgba(48,25,52,1) 50%, rgba(0,0,0,1) 100%);">
-            <div class="container">
-                <div class="header-wrapper">
-                    <div class="header-title">
-                        digital printing
-                    </div>
-                    <div class="header-slogan">
-                        Transforming Pixels to <div class="span-wrapper"><span id="page2"></span></div>
-                    </div>
-                </div>
-                <section class="splide b" aria-labelledby="carousel-heading">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide"><img src='img/digitalprinting5.jpeg'></li>
-                            <li class="splide__slide"><img src='img/digitalprinting3.jpeg'></li>
-                            <li class="splide__slide"><img src='img/digitalprinting6.jpeg'></li>
-                            <li class="splide__slide"><img src='img/digitalprinting4.jpeg'></li>
-                            <li class="splide__slide"><img src='img/digitalprinting.jpeg'></li>
-                            <li class="splide__slide"><img src='img/digitalprinting7.jpg'></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </section>
-
-
-        <section class="panel x-100"
-            style="background:radial-gradient(circle, rgba(27, 18, 18,1) 50%,rgba(0,0,0,1) 100%);">
-            <div class="container">
-                <div class="header-wrapper">
-                    <div class="header-title">
-                        CNC Cutting and Carving
-                    </div>
-                    <div class="header-slogan">
-                        Transforming Pixels to <div class="span-wrapper"><span id="page3"></span></div>
-                    </div>
-                </div>
-                <section class="splide c" aria-labelledby="carousel-heading">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide"><img src='img/cnc.jpeg'></li>
-                            <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
-                            <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
-                            <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
-                            <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </div>
-
-
 
     <!-- IMAGE BANNER -->
     <div class="image-banner-wrapper" id="gallery">
@@ -407,6 +437,11 @@
             </div>
         </section>
     </div>
+
+
+
+
+
 
     <div class="container-fluid the-contact" id="contact">
         <div class="the-contact-title reveal">

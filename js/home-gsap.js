@@ -1,4 +1,21 @@
 gsap.registerPlugin(ScrollTrigger);
+
+
+
+gsap.to("#header_image", {
+    scrollTrigger: {
+        trigger: "#header_image",
+        // markers: true,
+        start: "center 49%",
+        end: "75% top",
+        scrub: 0.5,
+
+    },
+    rotation: 45,
+    scale: 3,
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // IMAGE-BANNER
     const images = gsap.utils.toArray('.wrapper li img');
@@ -17,64 +34,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     imagesLoaded(images).on('always', scrollTrig);
 });
-// VERTICAL SCROLL
-let currentIndex = 0;
-let animating;
-let swipePanels = gsap.utils.toArray(".swipe-section .panel");
-gsap.set(".x-100", { xPercent: 100 });
-gsap.set(swipePanels, {
-    zIndex: i => i
+
+
+let panels = gsap.utils.toArray(".horizontal .panel");
+let panelTween = gsap.to(panels, {
+    xPercent: -100 * (panels.length - 1),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".horizontal",
+        start: "top top",
+        end: "+=" + (innerWidth * 3),
+        // markers: true,
+        pin: true,
+        scrub: 1,
+    }
 });
-let intentObserver = ScrollTrigger.observe({
-    type: "wheel,touch,scroll",
-    onUp: () => !animating && gotoPanel(currentIndex + 1, true),
-    onDown: () => !animating && gotoPanel(currentIndex - 1, false),
-    wheelSpeed: -1,
-    tolerance: 10,
-    preventDefault: true,
-    onPress: self => {
-        ScrollTrigger.isTouch && self.event.preventDefault()
-    }
-})
-intentObserver.disable();
-function gotoPanel(index, isScrollingDown) {
-    animating = true;
-    if ((index === swipePanels.length && isScrollingDown) || (index === -1 && !isScrollingDown)) {
-        let target = index;
-        gsap.to(target, {
-            duration: 0.00,
-            onComplete: () => {
-                animating = false;
-                isScrollingDown && intentObserver.disable();
-            }
-        });
-        return
-    }
-    let target = isScrollingDown ? swipePanels[index] : swipePanels[currentIndex];
-    gsap.to(target, {
-        xPercent: isScrollingDown ? 0 : 100,
-        duration: 0.75,
-        onComplete: () => {
-            animating = false;
-        }
-    });
-    currentIndex = index;
-}
-ScrollTrigger.create({
-    trigger: ".swipe-section",
-    pin: true,
+
+// we create a ScrollTrigger for each section just so we can figure out where they're positioned (when their top hits the top of the viewport)
+let sectionTriggers = sections.map(section => ScrollTrigger.create({
+    trigger: section,
     start: "top top",
-    end: "+=1",
-    onEnter: (self) => {
-        intentObserver.enable();
-        gotoPanel(currentIndex + 1, true);
-    },
-    onEnterBack: () => {
-        intentObserver.enable();
-        gotoPanel(currentIndex - 1, false);
-    }
+    refreshPriority: -1 // just so they get calculated last
+}));
+
+// after ScrollTrigger refreshes, we create a snap function that's directional. 
+ScrollTrigger.addEventListener("refresh", () => {
+    let start = panelTween.scrollTrigger.start,
+        end = panelTween.scrollTrigger.end,
+        each = (end - start) / (panels.length - 1), // each panel takes up a certain distance
+        max = ScrollTrigger.maxScroll(window),
+        sectionPositions = sectionTriggers.map(trigger => trigger.start / max); // snapping values must be in ratios (between 0 and 1)
+    panels.forEach((panel, i) => sectionPositions.push((start + i * each) / max)); // add the panel positions
+    snap = ScrollTrigger.snapDirectional(sectionPositions); // a snapping function that we can just feed a scroll value to and a direction and it'll spit back the closest one (ratio/progress) in that direction
 });
-
-// -----------------------------------------------
-
-

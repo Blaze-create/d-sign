@@ -7,9 +7,10 @@
 
 
 
-// * {
-//     background: hsla(101, 100%, 13%, 0.1) !important;
-// }
+* {
+    // background: hsla(101, 100%, 13%, 0.1) !important;
+    scroll-behavior: smooth;
+}
 
 // SCROLL WEBKIT
 *::-webkit-scrollbar {
@@ -303,15 +304,14 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url('/img/bg.png');
-        background-size: cover;
+        object-fit: cover;
         transform: rotate(10deg)scale(1.5);
+        filter: brightness(0.3)blur(3px);
         width: 100%;
         height: 100vh;
     }
 
     .header-center {
-        pointer-events: none;
         position: absolute;
         padding-top: 50px;
         display: flex;
@@ -324,7 +324,7 @@ body {
             width: 100%;
 
             #text {
-                color: var(--accent);
+                color: rgb(152, 206, 3);
             }
 
             .banner {
@@ -355,14 +355,14 @@ body {
                     align-items: center;
 
                     div {
-                        color: var(--background);
+                        color: white;
                         padding: 0;
                         margin: 0;
                         width: 100%;
-                        font-size: 6em;
+                        font-size: 3em;
                         letter-spacing: 5px;
                         font-weight: 600;
-                        white-space: nowrap;
+                        // white-space: nowrap;
                         line-height: 1.3em;
                         text-align: center;
                     }
@@ -372,9 +372,10 @@ body {
 
 
         p {
+            padding: 0 10px;
             font-size: 18px;
-            max-width: 400px;
-            color: var(--background);
+            max-width: 450px;
+            color: white;
             text-align: center;
         }
 
@@ -432,7 +433,7 @@ body {
 
 @media (max-width:800px) {
     .header-wrapperr .header-center .banner-wrapper .banner .scroll div {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -530,22 +531,30 @@ body {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.7);
-                    opacity: 0;
+                    opacity: 1;
                     transition: 0.3s;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    align-items: end;
                     font-size: 25px;
                     font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 3px;
+                    padding-bottom: 50px;
+
+                    .text {
+                        color: white;
+                        background: black;
+                        border-radius: 4px;
+                        padding: 0 5px;
+                    }
                 }
 
                 &:hover {
                     transform: scale(1.05);
 
                     .slide-content {
+                        background: rgba(0, 0, 0, 0.7);
                         opacity: 1;
                     }
                 }
@@ -702,20 +711,21 @@ body {
     height: 500vh !important;
 }
 
-.swipe-section {
+.horizontal {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
     overflow: hidden;
 
     .panel {
         display: flex;
-        justify-content: center;
-        // align-items: center;
         color: white;
-        width: 100%;
+        min-width: 100vw;
         min-height: 100vh;
-        position: absolute;
+        overflow: hidden;
+        scroll-snap-align: start;
     }
 }
 
@@ -780,7 +790,7 @@ body {
     }
 }
 
-.custom-btn {
+a.custom-btn {
     letter-spacing: 0px;
     width: fit-content;
     font-size: 18px;
@@ -795,12 +805,13 @@ body {
     cursor: pointer;
     margin: 10px 0;
     transition: 0.3s;
+    z-index: 1010;
 
     &:hover {
         padding: 6px 30px;
         border-radius: 10px;
         border: 2px solid #6fd6ff;
-        background: #50afd4;
+        background: #d47a50;
     }
 }
 

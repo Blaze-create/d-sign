@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let headertext = new Typed("#text", {
+        strings: ['Vibrant Signs', ' Stunning Displays'],
+        loop: true,
+        typeSpeed: 150,
+        backSpeed: 10,
+        backDelay: 1400,
+    });
     let typingText = new Typed("#page1", {
         strings: ['precision', ' passion', "Creativity", "perfection"],
         loop: true,
