@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: 1.6,
+            speed: 1,
         },
     });
     const splideb = new Splide('.splide.b', {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: 1.6,
+            speed: 1,
         },
     });
     const splidec = new Splide('.splide.c', {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: 1.6,
+            speed: 1,
         },
     });
     const splided = new Splide('.splide.d', {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         focus: 'center',
         perPage: 3,
         autoScroll: {
-            speed: 1.6,
+            speed: 1,
         },
     });
 

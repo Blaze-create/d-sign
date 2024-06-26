@@ -1,25 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
-
-// IMAGE-BANNER
-const images = gsap.utils.toArray('.wrapper li img');
-const scrollTrig = () => {
-    gsap.utils.toArray('.image-banner').forEach((section, index) => {
-        const w = section.querySelector('.wrapper');
-        const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-        gsap.fromTo(w, { x }, {
-            x: xEnd,
-            scrollTrigger: {
-                trigger: section,
-                scrub: 0.5
-            }
+document.addEventListener('DOMContentLoaded', function () {
+    // IMAGE-BANNER
+    const images = gsap.utils.toArray('.wrapper li img');
+    const scrollTrig = () => {
+        gsap.utils.toArray('.image-banner').forEach((section, index) => {
+            const w = section.querySelector('.wrapper');
+            const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
+            gsap.fromTo(w, { x }, {
+                x: xEnd,
+                scrollTrigger: {
+                    trigger: section,
+                    scrub: 0.5
+                }
+            });
         });
-    });
-}
-imagesLoaded(images).on('always', scrollTrig);
-
-
+    }
+    imagesLoaded(images).on('always', scrollTrig);
+});
 // VERTICAL SCROLL
-let currentIndex = -1;
+let currentIndex = 0;
 let animating;
 let swipePanels = gsap.utils.toArray(".swipe-section .panel");
 gsap.set(".x-100", { xPercent: 100 });
@@ -75,4 +74,7 @@ ScrollTrigger.create({
         gotoPanel(currentIndex - 1, false);
     }
 });
+
 // -----------------------------------------------
+
+

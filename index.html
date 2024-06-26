@@ -11,24 +11,24 @@
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "name": "[Your Company Name]",
+          "name": "D-sign & printing ltd",
           "image": "[URL to an image of your business or logo]",
           "description": "Top printing services in Mauritius, offering graphic design, digital printing, sign making, and CNC cutting and carving.",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "[Your Street Address]",
-            "addressLocality": "[City]",
-            "addressRegion": "[Region]",
+            "streetAddress": "New La Tour Koenig SME Park",
+            "addressLocality": "Port Louis",
+            "addressRegion": "Port Louis",
             "postalCode": "[Postal Code]",
             "addressCountry": "MU"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": [Your Latitude],
-            "longitude": [Your Longitude]
+            "latitude": -20.175231,
+            "longitude": 57.452200
           },
-          "url": "[Your Website URL]",
-          "telephone": "[Your Phone Number]",
+          "url": "https://d-signprintingltd.com/",
+          "telephone": "+23057835801",
           "priceRange": "$$",
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
@@ -41,7 +41,7 @@
               "Saturday"
             ],
             "opens": "08:00",
-            "closes": "18:00"
+            "closes": "17:00"
           },
           "sameAs": [
             "[Link to your Facebook page]",
@@ -63,7 +63,7 @@
 
 
     <script src="js/home_script.js" defer></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/home-gsap.js" defer></script>
@@ -71,11 +71,11 @@
     <script src="js/splide-extension-auto-scroll.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    
+
     <title>Homepage</title>
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
     <a href="#header" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
@@ -86,25 +86,78 @@
             </text>
         </svg>
     </div>
-    <div class="website-logo">
-        <!-- <h2>D-SIGN</h2> -->
-        <img src="img/logo.png" alt="">
-    </div>
-    <div class="contact">
-        <i class="fa-brands fa-whatsapp"></i>
-        <i class="fa-solid fa-phone"></i>
-        +230 5783 5801
+
+    <nav id="navbar" class="navbar fixed-top navbar-expand-md bg-body-tertiary"
+        style="background-color: var(--bs-content-bg); border-bottom: var(--bs-border-width) solid var(--bs-content-border-color);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 19px;">
+                <img src="img/logo.png" alt="Logo" width="42" height="25" class="d-inline-block align-text-top">
+                D-SIGN & PRINTING LTD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-2"
+                aria-controls="navbar-collapse-2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#header">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!-- HEADER -->
+    <div class="header-wrapperr" id="#particles-js">
+        <div class="header-image" id="header_image"></div>
+        <div class="header-center">
+            <div class="banner-wrapper" id="scroll_wrapper">
+                <div class="banner">
+                    <div class="scroll" id="scroll_top">
+                        <div>
+                            <span>A design studio made</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="scroll" id="scroll_bottom">
+                        <div>
+                            <span>to elevate your <span id="text"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                shot wave fox triangle fish smile shine pencil globe regular arrive headed next screen first cast
+                hill
+                neck field swept diagram scared orange ten
+            </p>
+            <a href="#" class="custom-btn">Get Started</a>
+        </div>
     </div>
 
 
-    <div class="my-nav">
-        <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
+
+
+
+
 
 
     <div class="swipe-section" id="header">
@@ -122,37 +175,37 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src='img/digitalprinting1.jpeg'>
+                                <img src='img/digitalprinting1.jpeg' alt="signage company">
                                 <div class="slide-content">
                                     Bagde
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/digitalprinting2.jpeg'>
+                                <img src='img/digitalprinting2.jpeg' alt="custom signs">
                                 <div class="slide-content">
                                     Window Graphics
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/branding1.jpeg'>
+                                <img src='img/branding1.jpeg' alt="business signage">
                                 <div class="slide-content">
                                     Vechicle branding
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/rollerbanner.jpg'>
+                                <img src='img/rollerbanner.jpg' alt="custom sign printing">
                                 <div class="slide-content">
                                     Banner
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/showcase.jpeg'>
+                                <img src='img/showcase.jpeg' alt="custom acrylic signs">
                                 <div class="slide-content">
                                     trade Show Display
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/pos.jpg'>
+                                <img src='img/pos.jpg' alt="sign board">
                                 <div class="slide-content">
                                     Point of sale Display
                                 </div>
@@ -184,19 +237,19 @@
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/sign2.jpeg'>
+                                <img src='img/sign2.jpeg' alt="sign board sign">
                                 <div class="slide-content">
                                     Directional Signs
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/sign3.jpeg'>
+                                <img src='img/sign3.jpeg' alt="signage solutions">
                                 <div class="slide-content">
                                     Exterior Signs
                                 </div>
                             </li>
                             <li class="splide__slide">
-                                <img src='img/info.jpeg'>
+                                <img src='img/info.jpeg' alt="acrylic sign printing">
                                 <div class="slide-content">
                                     Informational Signs
                                 </div>
@@ -293,10 +346,15 @@
 
 
     <!-- IMAGE BANNER -->
-    <div class="image-banner-wrapper">
+    <div class="image-banner-wrapper" id="gallery">
         <section class="image-banner">
             <div class="wrapper wrapper-text">
-                |D-SIGN|D-SIGN|D-SIGN|D-SIGN|
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
             </div>
         </section>
         <div class="image-banner">
@@ -340,20 +398,25 @@
         </div>
         <section class="image-banner">
             <div class="wrapper wrapper-text">
-                |D-SIGN|D-SIGN|D-SIGN|D-SIGN|
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
+                |D-SIGN|
+                <img src="img/logo.png" alt="">
             </div>
         </section>
     </div>
 
-    <div class="container-fluid the-contact">
-        <div class="the-contact-title">
+    <div class="container-fluid the-contact" id="contact">
+        <div class="the-contact-title reveal">
             contact us
-            <div></div>
+            <div class="reveal"></div>
         </div>
         <div class="row">
             <div class="col info">
-                <div class="my-row">
-                    <div class="my-col">
+                <div class="row my-row">
+                    <div class="col my-col reveal">
                         <div class="location">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
@@ -364,7 +427,7 @@
                             New La Tour Koenig SME Park, MU, Port Louis 11108
                         </div>
                     </div>
-                    <div class="my-col">
+                    <div class="col my-col reveal">
                         <div class="location">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
@@ -377,8 +440,8 @@
                     </div>
 
                 </div>
-                <div class="my-row">
-                    <div class="my-col">
+                <div class="row my-row">
+                    <div class="col my-col reveal">
                         <div class="location">
                             <i class="fa-solid fa-phone-volume"></i>
                         </div>
@@ -390,7 +453,7 @@
 
                         </div>
                     </div>
-                    <div class="my-col">
+                    <div class="col my-col reveal">
                         <div class="contact-name">
                             contact us
                         </div>
@@ -407,7 +470,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col map">
+            <div class="col map reveal">
                 <!-- <div id="mapid"></div> -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.0120578707465!2d57.44963377599168!3d-20.17522344599311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5179f231827f%3A0x2fed6a97b728148!2sD-Sign%20%26%20Printing%20ltd!5e0!3m2!1sen!2smu!4v1719295848511!5m2!1sen!2smu"
