@@ -7,16 +7,30 @@ document.addEventListener('DOMContentLoaded', function () {
         backDelay: 1400,
     });
     let typingText = new Typed("#page1", {
-        strings: ['precision', ' passion', "Creativity", "perfection"],
+        strings: ['Make Your Mark', 'Stand Out Everywhere', "Unleash Your Brand’s Potential", "Bold. Visible. Unforgettable"],
         loop: true,
-        typeSpeed: 150,
+        typeSpeed: 50,
         backSpeed: 10,
         backDelay: 1400,
     });
     let typingText2 = new Typed("#page2", {
-        strings: ['paper', 'Canvas', "Fabric", "Masterpieces"],
+        strings: ['Crafting Custom Signs that Define Your Brand', 'Your Vision, Our Craft', 'Signage that Shines', "Express Your Brand"],
         loop: true,
-        typeSpeed: 150,
+        typeSpeed: 50,
+        backSpeed: 10,
+        backDelay: 1400,
+    });
+    let typingText3 = new Typed("#page3", {
+        strings: ['Impress with Every Page', 'our One-Stop Shop for All Printing Needs!', 'Print Beyond Limits', "Precision Printing for Brochures, Booklets, Wallpaper, and More"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 10,
+        backDelay: 1400,
+    });
+    let typingText4 = new Typed("#page4", {
+        strings: ['Engraving Excellence', 'Crafting Beauty from Acrylic, Wood, PVC, and Metal!', 'Decorate with Distinction', 'Precision Craftsmanship for Stunning Interior Decor!'],
+        loop: true,
+        typeSpeed: 50,
         backSpeed: 10,
         backDelay: 1400,
     });
@@ -72,7 +86,7 @@ $(window).on('load', function () {
     function hidePreloader() {
         var preloader = $('.spinner-wrapper');
         setTimeout(function () {
-            preloader.slideUp(preloaderFadeOutTime,'swing');
+            preloader.slideUp(preloaderFadeOutTime, 'swing');
         }, 500);
     }
     hidePreloader();
@@ -92,4 +106,17 @@ window.addEventListener("scroll", () => {
             reveals[i].classList.remove("active");
         }
     }
+});
+
+window.addEventListener("scroll", function () {
+    var backToTopBtn = document.getElementById("back-to-top-btn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+document.getElementById("back-to-top-btn").addEventListener("click", function () {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });

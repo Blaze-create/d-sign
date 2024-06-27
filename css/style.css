@@ -2,6 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --text: #170106;
+  --background: #e9d8db;
+  --primary: #f90a41;
+  --secondary: #77fcab;
+  --accent: #44d5fa;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -13,26 +21,26 @@
 
 *::-webkit-scrollbar-track {
   border-radius: 6px;
-  background-color: black;
+  background-color: var(--text);
 }
 *::-webkit-scrollbar-track:hover {
-  background-color: gray;
+  background-color: var(--accent);
 }
 *::-webkit-scrollbar-track:active {
-  background-color: gray;
+  background-color: var(--primary);
 }
 
 *::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: #50afd4;
-  border: 4px solid #6fd6ff;
+  background-color: var(--accent);
+  border: 4px solid var(--primary);
 }
 *::-webkit-scrollbar-thumb:hover {
   background-color: var(--background);
 }
 *::-webkit-scrollbar-thumb:active {
-  background-color: var(--accent);
-  border: 4px solid var(--background);
+  background-color: var(--primary);
+  border: 4px solid var(--accent);
 }
 
 body {
@@ -46,7 +54,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgb(33, 33, 41);
+  background: var(--text);
 }
 .spinner-wrapper svg {
   font-family: "Lobster", sans-serif;
@@ -95,13 +103,13 @@ body {
   border-radius: 8px;
 }
 .nav-item .nav-link.active {
-  background: #7e0400;
-  color: white;
+  background: var(--primary);
+  color: var(--background);
 }
 
 .the-contact {
-  padding: 20px;
-  background: #eee;
+  padding: 20px 20px;
+  background: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,12 +124,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
+}
+.the-contact .the-contact-title p {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 .the-contact .the-contact-title div {
   height: 6px;
   width: 100px;
-  background: red;
+  background: var(--primary);
 }
 .the-contact .row {
   width: 100%;
@@ -147,15 +160,14 @@ body {
 .the-contact .row .col.info .my-row .my-col {
   max-width: 300px;
   min-width: 300px;
-  max-height: 350px;
-  min-height: 300px;
+  min-height: 220px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: var(--background);
   gap: 15px;
 }
 .the-contact .row .col.info .my-row .my-col .contact-name {
@@ -176,11 +188,11 @@ body {
 }
 .the-contact .row .col.info .contact-content a {
   text-decoration: underline;
-  color: white;
+  color: var(--background);
   letter-spacing: 2px;
 }
 .the-contact .row .col.info .location {
-  border: 2px solid white;
+  border: 2px solid var(--background);
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -203,6 +215,8 @@ body {
 }
 
 .back-to-top {
+  border: none;
+  outline: none;
   text-decoration: none;
   z-index: 1001;
   position: fixed;
@@ -210,7 +224,7 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  background: rgb(5, 3, 19);
+  background: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,11 +233,11 @@ body {
 }
 .back-to-top:hover {
   border-radius: 50%;
-  background: rgb(20, 12, 75);
+  background: var(--accent);
   transform: scale(1.4);
 }
 .back-to-top i {
-  color: white;
+  color: var(--background);
 }
 
 .header-wrapperr {
@@ -259,7 +273,7 @@ body {
   width: 100%;
 }
 .header-wrapperr .header-center .banner-wrapper #text {
-  color: rgb(152, 206, 3);
+  color: var(--primary);
 }
 .header-wrapperr .header-center .banner-wrapper .banner {
   padding: 0;
@@ -288,7 +302,7 @@ body {
   align-items: center;
 }
 .header-wrapperr .header-center .banner-wrapper .banner .scroll div {
-  color: white;
+  color: var(--background);
   padding: 0;
   margin: 0;
   width: 100%;
@@ -302,7 +316,7 @@ body {
   padding: 0 10px;
   font-size: 18px;
   max-width: 450px;
-  color: white;
+  color: var(--background);
   text-align: center;
 }
 .header-wrapperr .header-center a {
@@ -386,7 +400,7 @@ body {
   min-width: 100px;
 }
 .header-wrapper .header-slogan .span-wrapper span {
-  color: rgb(103, 255, 235);
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -434,8 +448,8 @@ body {
   padding-bottom: 50px;
 }
 .splide .splide__track .splide__list .splide__slide .slide-content .text {
-  color: white;
-  background: black;
+  color: var(--background);
+  background: var(--text);
   border-radius: 4px;
   padding: 0 5px;
 }
@@ -484,7 +498,7 @@ body {
 }
 .website-logo h2 {
   font-family: "Lobster", sans-serif;
-  color: white;
+  color: var(--background);
   letter-spacing: 4px;
   font-weight: 700;
 }
@@ -503,7 +517,7 @@ body {
   min-height: 50px;
   padding: 0 10px;
   box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: var(--background);
 }
 
 .my-nav {
@@ -540,19 +554,19 @@ body {
 }
 .my-nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--background);
   letter-spacing: 5px;
   font-weight: 600;
   font-family: "Lobster", sans-serif;
 }
 .my-nav ul li:hover {
-  background: rgba(0, 0, 0, 0.5215686275);
+  background: var(--text);
 }
 .my-nav ul li.active {
-  background: white;
+  background: var(--background);
 }
 .my-nav ul li.active a {
-  color: black;
+  color: var(--text);
   font-size: 14px;
   letter-spacing: 2px;
   font-weight: 700;
@@ -649,9 +663,8 @@ a.custom-btn {
   font-weight: 400;
   background: transparent;
   border-radius: 15px;
-  border: 2px solid #50afd4;
-  background: #6fd6ff;
-  color: white;
+  background: var(--primary);
+  color: var(--background);
   padding: 2px 15px;
   text-decoration: none;
   cursor: pointer;
@@ -662,8 +675,8 @@ a.custom-btn {
 a.custom-btn:hover {
   padding: 6px 30px;
   border-radius: 10px;
-  border: 2px solid #6fd6ff;
-  background: #d47a50;
+  background: var(--background);
+  color: var(--primary);
 }
 
 .image-banner-wrapper {
@@ -708,12 +721,12 @@ a.custom-btn:hover {
 }
 
 .footer {
-  color: white;
+  color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding-top: 10px;
 }
 .footer .website-log img {
   position: relative;
@@ -725,11 +738,11 @@ a.custom-btn:hover {
   font-weight: 700;
 }
 .footer .website-title span {
-  color: #50afd4;
+  color: var(--primary);
 }
 .footer .slogan {
   text-transform: uppercase;
-  color: white;
+  color: var(--background);
   font-size: 20px;
 }
 .footer .designer-link {
@@ -764,6 +777,8 @@ a.custom-btn:hover {
   text-align: center;
 }
 .footer .website-detail {
+  margin-top: 15px;
+  margin-bottom: 8px;
   font-size: 15px;
   color: gray;
 }

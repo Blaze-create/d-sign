@@ -76,9 +76,18 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
-    <a href="#navheader" class="back-to-top">
+
+
+    <!-- <a href="#" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    </a> -->
+
+    <button class="back-to-top" id="back-to-top-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+
     <div class="spinner-wrapper">
         <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -102,6 +111,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#navheader">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">What We Do</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Gallery</a>
@@ -151,24 +163,24 @@
                     </div>
                     <p>
                         Discover top-notch graphic design, digital printing, sign making, and CNC cutting and carving
-                        services in Mauritius with D-SIGN
+                        services in Mauritius with D-SIGN & PRINTING LTD
                     </p>
-                    <a href="#navinfo" class="custom-btn">Get Started</a>
+                    <a href="#service" class="custom-btn">Get Started</a>
                 </div>
             </div>
 
         </section>
 
-        <section class="horizontal" id="navinfo">
-            <section class="panel"
+        <section class="horizontal"  id="service">
+            <section  class="panel"
                 style="background: radial-gradient(circle,rgba(33,33,41,1)  50%, rgba(0,0,0,1) 100%);">
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="header-title reveal">
-                            Brandings
+                            Elevate Your Brand with Us
                         </div>
                         <div class="header-slogan reveal">
-                            Print with <div class="span-wrapper"><span id="page1"></span></div>
+                            <div class="span-wrapper"><span id="page1"></span></div>
                         </div>
                     </div>
                     <section class="splide a reveal" aria-labelledby="carousel-heading">
@@ -232,10 +244,10 @@
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="header-title">
-                            sign making
+                            Tailored Signage Solutions
                         </div>
                         <div class="header-slogan">
-                            Transforming Pixels to <div class="span-wrapper"><span id="page4"></span></div>
+                            <div class="span-wrapper"><span id="page2"></span></div>
                         </div>
                     </div>
                     <section class="splide d" aria-labelledby="carousel-heading">
@@ -324,21 +336,55 @@
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="header-title">
-                            digital printing
+                            Precision Digital Print Solutions
                         </div>
                         <div class="header-slogan">
-                            Transforming Pixels to <div class="span-wrapper"><span id="page2"></span></div>
+                            <div class="span-wrapper"><span id="page3"></span></div>
                         </div>
                     </div>
                     <section class="splide b" aria-labelledby="carousel-heading">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide"><img src='img/digitalprinting5.jpeg'></li>
-                                <li class="splide__slide"><img src='img/digitalprinting3.jpeg'></li>
-                                <li class="splide__slide"><img src='img/digitalprinting6.jpeg'></li>
-                                <li class="splide__slide"><img src='img/digitalprinting4.jpeg'></li>
-                                <li class="splide__slide"><img src='img/digitalprinting.jpeg'></li>
-                                <li class="splide__slide"><img src='img/digitalprinting7.jpg'></li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting5.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text" style="font-size: 23px;">
+                                            Large format printing
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting6.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Booklets
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting4.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Brochures
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Wallpaper
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/digitalprinting7.jpg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Window graphic
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -351,20 +397,47 @@
                 <div class="container">
                     <div class="header-wrapper">
                         <div class="header-title">
-                            CNC Cutting and Carving
+                            Artistry in CNC Machining
                         </div>
                         <div class="header-slogan">
-                            Transforming Pixels to <div class="span-wrapper"><span id="page3"></span></div>
+                            <div class="span-wrapper"><span id="page4"></span></div>
                         </div>
                     </div>
                     <section class="splide c" aria-labelledby="carousel-heading">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide"><img src='img/cnc.jpeg'></li>
-                                <li class="splide__slide"><img src='https://picsum.photos/seed/8/1240/874'></li>
-                                <li class="splide__slide"><img src='https://picsum.photos/seed/7/1240/874'></li>
-                                <li class="splide__slide"><img src='https://picsum.photos/seed/4/1240/874'></li>
-                                <li class="splide__slide"><img src='https://picsum.photos/seed/3/1240/874'></li>
+                                <li class="splide__slide">
+                                    <img src='img/cnc.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Backlit decor
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/privacy2.jpg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            PRIVACY SCREENS
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/engraving.png'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Engraving
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src='img/decor.jpeg'>
+                                    <div class="slide-content">
+                                        <div class="text">
+                                            Art and Decor
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -379,11 +452,11 @@
     <div class="image-banner-wrapper" id="gallery">
         <section class="image-banner">
             <div class="wrapper wrapper-text">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
             </div>
         </section>
@@ -428,11 +501,11 @@
         </div>
         <section class="image-banner">
             <div class="wrapper wrapper-text">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
-                |D-SIGN|
+                |D-SIGN & PRINTING|
                 <img src="img/logo.png" alt="">
             </div>
         </section>
@@ -446,6 +519,8 @@
     <div class="container-fluid the-contact" id="contact">
         <div class="the-contact-title reveal">
             contact us
+            <p>We have been creating special pieces for many clients. Give us a call or send us a mail to talk about
+                your idea !</p>
             <div class="reveal"></div>
         </div>
         <div class="row">
@@ -527,14 +602,8 @@
                 <div class="slogan">
                     signage solution
                 </div>
-                <div class="designer-link">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
                 <div class="website-detail">
-                    © 2024 D-sign & Printing Ltd All Right Reserved.
+                    Copyright©2024 D-sign & Printing Ltd. All Right Reserved. Non-contractual images.
                 </div>
             </div>
         </div>
