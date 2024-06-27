@@ -130,6 +130,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   text-transform: capitalize;
+  text-align: center;
 }
 .the-contact .the-contact-title div {
   height: 6px;
@@ -143,26 +144,25 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-width: 300px;
   background: #191a27;
   flex-direction: column;
   gap: 10px;
   margin: 0;
+  min-width: 300px;
+  min-height: 400px;
 }
-.the-contact .row .col.info .my-row {
+.the-contact .row .col.info .row.my-row {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 10px;
+  height: 100%;
 }
-.the-contact .row .col.info .my-row .my-col {
-  max-width: 300px;
+.the-contact .row .col.info .row.my-row .col.my-col {
+  max-width: 310px;
   min-width: 300px;
   min-height: 220px;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,17 +170,17 @@ body {
   color: var(--background);
   gap: 15px;
 }
-.the-contact .row .col.info .my-row .my-col .contact-name {
+.the-contact .row .col.info .row.my-row .col.my-col .contact-name {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.the-contact .row .col.info .my-row .my-col .contact-socials {
+.the-contact .row .col.info .row.my-row .col.my-col .contact-socials {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   min-width: 200px;
 }
-.the-contact .row .col.info .my-row .my-col .contact-socials i {
+.the-contact .row .col.info .row.my-row .col.my-col .contact-socials i {
   font-size: 30px;
 }
 .the-contact .row .col.info .contact-content {
@@ -212,6 +212,8 @@ body {
 }
 .col.map iframe {
   margin: 0;
+  outline: none;
+  border: none;
 }
 
 .back-to-top {
@@ -478,6 +480,11 @@ body {
   .splide .splide__track .splide__list .splide__slide {
     min-width: 300px;
     max-height: 400px;
+  }
+  .splide .splide__track .splide__list .splide__slide .slide-content {
+    font-size: 16px;
+    text-align: center;
+    width: 98%;
   }
 }
 .website-logo {
